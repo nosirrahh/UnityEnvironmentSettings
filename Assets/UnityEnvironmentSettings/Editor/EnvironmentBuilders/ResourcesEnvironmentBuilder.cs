@@ -1,4 +1,3 @@
-#if UNITY_EDITOR
 using Nosirrahh.UnityEnvironmentSettings.Runtime;
 using System.IO;
 using UnityEditor;
@@ -7,14 +6,15 @@ using UnityEngine;
 namespace Nosirrahh.UnityEnvironmentSettings.Editor
 {
     /// <summary>
-    /// Em construção.
+    /// Responsible for creating and managing the storage of an <see cref="EnvironmentSettingsScriptableObject"/> 
+    /// object in the `Resources` directory within the Unity project.
     /// </summary>
     public class ResourcesEnvironmentBuilder : IEnvironmentBuilder
     {
         #region Fields
 
         /// <summary>
-        /// Em construção.
+        /// Path where the environment asset will be saved after being built.
         /// </summary>
         private string assetPath;
 
@@ -23,7 +23,7 @@ namespace Nosirrahh.UnityEnvironmentSettings.Editor
         #region Properties
 
         /// <summary>
-        /// Em construção.
+        /// Default path for the environment settings asset within the `Resources` folder.
         /// </summary>
         public string DefaultPath { get { return $"Assets/Resources/{nameof (EnvironmentSettings)}.asset"; } }
 
@@ -32,11 +32,11 @@ namespace Nosirrahh.UnityEnvironmentSettings.Editor
         #region IEnvironmentBuilder Methods
 
         /// <summary>
-        /// Em construção.
+        /// Builds the environment settings asset and saves it to the specified path.
         /// </summary>
-        /// <param name="settings">Em construção.</param>
-        /// <param name="path">Em construção.</param>
-        /// <returns>Em construção.</returns>
+        /// <param name="settings">Environment settings to be saved in the asset.</param>
+        /// <param name="path">Optional path for the asset. If not specified, <see cref="DefaultPath"/> is used.</param>
+        /// <returns>Returns <c>true</c> if the asset is successfully built; otherwise, <c>false</c>.</returns>
         public bool Build (EnvironmentSettings settings, string path = null)
         {
             try
@@ -66,7 +66,7 @@ namespace Nosirrahh.UnityEnvironmentSettings.Editor
         }
 
         /// <summary>
-        /// Em construção.
+        /// Removes the created asset for the environment settings.
         /// </summary>
         public void Destroy ()
         {
@@ -79,10 +79,10 @@ namespace Nosirrahh.UnityEnvironmentSettings.Editor
         #region Private Methods
 
         /// <summary>
-        /// Em construção.
+        /// Validates and creates the directory structure for the asset at the specified path.
         /// </summary>
-        /// <param name="assetPath">Em construção.</param>
-        /// <returns>Em construção.</returns>
+        /// <param name="assetPath">Full path for the asset, including file name and extension.</param>
+        /// <returns>Returns <c>true</c> if the path is valid and created successfully; otherwise, <c>false</c>.</returns>
         private bool BuildPath (string assetPath)
         {
             try
@@ -134,4 +134,3 @@ namespace Nosirrahh.UnityEnvironmentSettings.Editor
         #endregion
     }
 }
-#endif

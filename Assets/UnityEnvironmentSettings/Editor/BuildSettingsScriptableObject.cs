@@ -2,13 +2,17 @@ using UnityEngine;
 
 namespace Nosirrahh.UnityEnvironmentSettings.Editor
 {
-    [CreateAssetMenu (fileName = "BuildSettings", menuName = "Nosirrahh/BuildSettings", order = 1)]
+    /// <summary>
+    /// ScriptableObject class that stores build settings and environment provider.
+    /// Uses the creation menu to generate an instance of this object in the project.
+    /// </summary>
+    [CreateAssetMenu (fileName = "BuildSettings", menuName = "Nosirrahh/UnityEnvironmentSettings/BuildSettings", order = 1)]
     public class BuildSettingsScriptableObject : ScriptableObject
     {
         #region Fields
 
         /// <summary>
-        /// Em construção.
+        /// Stores the build settings, including the environment provider.
         /// </summary>
         [SerializeField]
         private BuildSettings buildSettings;
@@ -18,7 +22,7 @@ namespace Nosirrahh.UnityEnvironmentSettings.Editor
         #region Properties
 
         /// <summary>
-        /// Em construção.
+        /// Property to access the build settings.
         /// </summary>
         public BuildSettings BuildSettings { get { return buildSettings; } }
 
