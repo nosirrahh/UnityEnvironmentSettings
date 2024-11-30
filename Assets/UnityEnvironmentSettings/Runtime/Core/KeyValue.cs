@@ -3,7 +3,7 @@ using System;
 namespace Nosirrahh.UnityEnvironmentSettings.Runtime
 {
     /// <summary>
-    /// Em construção.
+    /// Represents a key-value pair for storing environment settings.
     /// </summary>
     [Serializable]
     public struct KeyValue
@@ -11,11 +11,11 @@ namespace Nosirrahh.UnityEnvironmentSettings.Runtime
         #region Fields
 
         /// <summary>
-        /// Em construção.
+        /// The key that uniquely identifies a setting.
         /// </summary>
         public string key;
         /// <summary>
-        /// Em construção.
+        /// The value associated with the key.
         /// </summary>
         public string value;
 
@@ -23,6 +23,15 @@ namespace Nosirrahh.UnityEnvironmentSettings.Runtime
 
         #region Constructors
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="KeyValue"/> structure with the specified key and value.
+        /// </summary>
+        /// <param name="key">
+        /// The configuration key.
+        /// </param>
+        /// <param name="value">
+        /// The value associated with the key.
+        /// </param>
         public KeyValue (string key, string value)
         {
             this.key = key;

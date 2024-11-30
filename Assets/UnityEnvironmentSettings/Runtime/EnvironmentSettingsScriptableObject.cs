@@ -3,15 +3,15 @@ using UnityEngine;
 namespace Nosirrahh.UnityEnvironmentSettings.Runtime
 {
     /// <summary>
-    /// Em construção.
+    /// Represents a ScriptableObject that encapsulates environment settings for use in Unity.
     /// </summary>
-    [CreateAssetMenu (fileName = "EnvironmentSettings", menuName = "Nosirrahh/EnvironmentSettings", order = 1)]
+    [CreateAssetMenu (fileName = "EnvironmentSettings", menuName = "Nosirrahh/UnityEnvironmentSettings/EnvironmentSettings", order = 1)]
     public class EnvironmentSettingsScriptableObject : ScriptableObject
     {
         #region Fields
 
         /// <summary>
-        /// Em construção.
+        /// Contains the associated environment settings.
         /// </summary>
         [SerializeField]
         private EnvironmentSettings environmentSettings;
@@ -21,7 +21,7 @@ namespace Nosirrahh.UnityEnvironmentSettings.Runtime
         #region Properties
 
         /// <summary>
-        /// Em construção.
+        /// Gets the environment settings encapsulated in this ScriptableObject.
         /// </summary>
         public EnvironmentSettings EnvironmentSettings { get { return environmentSettings; } }
 

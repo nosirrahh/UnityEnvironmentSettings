@@ -5,14 +5,14 @@ using UnityEngine.Events;
 namespace Nosirrahh.UnityEnvironmentSettings.Runtime
 {
     /// <summary>
-    /// Em construção.
+    /// Manages the loading and centralized access to environment settings.
     /// </summary>
     public static class EnvironmentSettingsManager
     {
         #region Fields
 
         /// <summary>
-        /// Em construção.
+        /// The current instance of the loaded environment settings.
         /// </summary>
         private static EnvironmentSettings environmentSettings;
 
@@ -21,7 +21,7 @@ namespace Nosirrahh.UnityEnvironmentSettings.Runtime
         #region Properties
 
         /// <summary>
-        /// Em construção.
+        /// Gets the currently loaded environment settings.
         /// </summary>
         public static EnvironmentSettings EnvironmentSettings { get { return environmentSettings; } }
 
@@ -30,10 +30,15 @@ namespace Nosirrahh.UnityEnvironmentSettings.Runtime
         #region Public Methods
 
         /// <summary>
-        /// Em construção.
+        /// Loads the environment settings using the specified loader.
         /// </summary>
-        /// <param name="environmentLoader">Em construção.</param>
-        /// <param name="onCompleted">Em construção.</param>
+        /// <param name="environmentLoader">
+        /// An instance of <see cref="IEnvironmentLoader"/> responsible for loading the environment settings.
+        /// </param>
+        /// <param name="onCompleted">
+        /// A callback to be executed once the loading process is complete.
+        /// The callback receives an instance of <see cref="EnvironmentSettings"/> representing the loaded settings.
+        /// </param>
         public static void Load (IEnvironmentLoader environmentLoader, UnityAction<EnvironmentSettings> onCompleted)
         {
             try

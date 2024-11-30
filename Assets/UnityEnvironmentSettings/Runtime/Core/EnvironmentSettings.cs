@@ -4,18 +4,21 @@ using UnityEngine;
 
 namespace Nosirrahh.UnityEnvironmentSettings.Runtime
 {
+    /// <summary>
+    /// Represents the environment settings for an application, including specific configuration variables and their context.
+    /// </summary>
     [Serializable]
     public class EnvironmentSettings
     {
         #region Fields
 
         /// <summary>
-        /// Em construção.
+        /// The name or type of the environment.
         /// </summary>
         [SerializeField]
         private string environment;
         /// <summary>
-        /// Em construção.
+        /// List of key-value configuration settings specific to the current environment.
         /// </summary>
         [SerializeField]
         private List<KeyValue> settings;
@@ -25,12 +28,12 @@ namespace Nosirrahh.UnityEnvironmentSettings.Runtime
         #region Properties
 
         /// <summary>
-        /// Em construção.
+        /// Gets the name of the current environment.
         /// </summary>
         public string Environment { get { return environment; } }
 
         /// <summary>
-        /// Em construção.
+        /// Gets the list of key-value pairs representing the environment's settings.
         /// </summary>
         public List<KeyValue> Settings { get { return settings; } }
 
@@ -38,6 +41,10 @@ namespace Nosirrahh.UnityEnvironmentSettings.Runtime
 
         #region Constructors
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="EnvironmentSettings"/> with the specified environment name.
+        /// </summary>
+        /// <param name="environment">The name of the environment.</param>
         public EnvironmentSettings (string environment)
         {
             this.environment = environment;
@@ -49,11 +56,10 @@ namespace Nosirrahh.UnityEnvironmentSettings.Runtime
         #region Public Methods
 
         /// <summary>
-        /// Em construção.
+        /// Adds or updates a configuration setting in the environment with the specified key and value.
         /// </summary>
-        /// <param name="key">Em construção.</param>
-        /// <param name="value">Em construção.</param>
-        /// <returns>Em construção.</returns>
+        /// <param name="key">The configuration key.</param>
+        /// <param name="value">The value associated with the key.</param>
         public void AddValue (string key, string value)
         {
             try
@@ -75,11 +81,11 @@ namespace Nosirrahh.UnityEnvironmentSettings.Runtime
         }
 
         /// <summary>
-        /// Em construção.
+        /// Attempts to retrieve the value associated with a specific key.
         /// </summary>
-        /// <param name="key"></param>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param name="key">The configuration key.</param>
+        /// <param name="value">When this method returns, contains the value associated with the key, if found; otherwise, the default value for the type.</param>
+        /// <returns><c>true</c> if the key was found; otherwise, <c>false</c>.</returns>
         public bool TryGetValue (string key, out string value)
         {
             try
