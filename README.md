@@ -18,7 +18,9 @@ Before using UnityEnvironmentSettings, ensure you have:
 ### Option 2: Unity Package Manager
 1. Open your Unity project.
 2. Add the package via the Package Manager:
-    URL: https://github.com/nosirrahh/UnityEnvironmentSettings.git?path=Assets/UnityEnvironmentSettings/package.json
+   ```
+   https://github.com/nosirrahh/UnityEnvironmentSettings.git?path=Assets/UnityEnvironmentSettings/package.json
+   ```
 
 ## Configuration
 ### Step 1: Create Environment Settings
@@ -36,8 +38,7 @@ loader.Init(new Dictionary<string, string> {
     { ResourcesEnvironmentLoader.ResourcesPathKey, "EnvironmentSettings.Development" }
 });
 ```
-
-## Example Usage
+### Step 4: Load and access settings
 Here’s how to load and access settings:
 ```csharp
 EnvironmentSettingsManager.Load(
