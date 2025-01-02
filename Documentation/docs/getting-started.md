@@ -2,7 +2,7 @@
 
 ## Prerequisites
 Before using UnityEnvironmentSettings, ensure you have:
-- **Unity Editor**: Version 2021.3 or later.
+- **Unity Editor**: Version 2022.1 or later.
 - **Basic C# Knowledge**: Understanding of Unity's scripting workflow.
 - **TextMeshPro**: Installed via Unity Package Manager (if using samples).
 
