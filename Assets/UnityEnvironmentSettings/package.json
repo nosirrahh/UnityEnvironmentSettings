@@ -3,18 +3,25 @@
   "displayName": "UnityEnvironmentSettings",
   "version": "0.1.0",
   "unity": "2022.1",
-  "description": "[...]",
+  "description": "UnityEnvironmentSettings is a solution for managing environment-specific settings in Unity projects. It enables developers to separate configuration data from code, making their projects easier to maintain and adapt to different environments such as development, staging, and production.",
   "keywords": [
     "",
     ""
   ],
+  "documentationUrl": "https://github.com/nosirrahh/UnityEnvironmentSettings",
   "dependencies": {
-    "com.unity.nuget.newtonsoft-json": ""
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
   },
-  "samples": [],
+  "samples": [
+    {
+      "displayName": "ResourcesSample",
+      "description": "Em construção.",
+      "path": "Samples~/ResourcesSample"
+    }
+  ],
   "author": {
     "name": "nosirrahh",
     "email": "nosirrahh@gmail.com",
-    "url": ""
+    "url": "https://github.com/nosirrahh/"
   }
 }
