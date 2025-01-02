@@ -20,14 +20,3 @@ Here’s a simplified overview of the workflow:
 1. A loader (e.g., `ResourcesEnvironmentLoader`) retrieves settings data.
 2. The settings are passed to the `EnvironmentSettingsManager`.
 3. Developers access the settings via the `EnvironmentSettings` API.
-
-## Target Audience
-This project is ideal for:
-- Unity developers working on multi-environment projects.
-- Teams aiming to improve configuration management practices.
-- Projects requiring secure and maintainable environment configurations.
-
-## Requirements
-To use UnityEnvironmentSettings, you need:
-- Unity 2021.3 or later.
-- Basic familiarity with C# scripting in Unity.
