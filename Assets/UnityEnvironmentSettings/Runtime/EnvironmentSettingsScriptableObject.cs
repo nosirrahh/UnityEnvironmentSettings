@@ -5,7 +5,7 @@ namespace Nosirrahh.UnityEnvironmentSettings.Runtime
     /// <summary>
     /// Represents a ScriptableObject that encapsulates environment settings for use in Unity.
     /// </summary>
-    [CreateAssetMenu (fileName = "EnvironmentSettings", menuName = "Nosirrahh/UnityEnvironmentSettings/EnvironmentSettings", order = 1)]
+    [CreateAssetMenu (fileName = "EnvironmentSettings", menuName = "Packages/UnityEnvironmentSettings/EnvironmentSettings", order = 1)]
     public class EnvironmentSettingsScriptableObject : ScriptableObject
     {
         #region Fields
