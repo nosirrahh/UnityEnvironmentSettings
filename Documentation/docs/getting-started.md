@@ -19,7 +19,7 @@ Before using UnityEnvironmentSettings, ensure you have:
 
 ## Configuration
 ### Step 1: Create Environment Settings
-1. Navigate to Assets > Create > Nosirrahh > EnvironmentSettings.
+1. Navigate to Assets > Create > Packages > UnityEnvironmentSettings > EnvironmentSettings.
 2. Configure the environment and key-value pairs as needed.
 ### Step 2: Create a Loader
 Use the built-in ResourcesEnvironmentLoader:
